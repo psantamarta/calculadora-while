@@ -8,7 +8,7 @@ public class CalculadoraUsandoWhile{
             multiplo = multiplo + 5;
         }
     }
-    
+
     public void sumaDeValores(){
         int numero = 0;
         int suma = 0;
@@ -18,7 +18,7 @@ public class CalculadoraUsandoWhile{
         }
         System.out.println(suma);    
     }
-    
+
     public int sumaDeValoresEnElIntervalo(int a, int b){
         int resultado = 0; 
         int valorA = a;
@@ -46,5 +46,23 @@ public class CalculadoraUsandoWhile{
             resultado = -1;
         }
         return resultado;
+    }
+
+    public boolean esPrimo(int n){
+        boolean primo = true;
+        if (n > 1){
+            int divisor = 2;
+            while ((primo) && (divisor != n)){
+                if ((n % divisor == 0)){
+                    primo = false;    
+               }
+                divisor++;
+           }    
+        }
+        else{  
+            primo = false;
+            System.out.println("Introduce un número mayor que 1");
+        }
+        return primo;
     }
 }
